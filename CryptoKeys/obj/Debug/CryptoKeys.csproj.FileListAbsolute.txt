@@ -1,0 +1,17 @@
+C:\Users\larryx\CryptoKeys\CryptoKeys\bin\Debug\CryptoKeys.exe.config
+C:\Users\larryx\CryptoKeys\CryptoKeys\bin\Debug\CryptoKeys.exe
+C:\Users\larryx\CryptoKeys\CryptoKeys\bin\Debug\CryptoKeys.pdb
+C:\Users\larryx\CryptoKeys\CryptoKeys\obj\Debug\CryptoKeys.csprojAssemblyReference.cache
+C:\Users\larryx\CryptoKeys\CryptoKeys\obj\Debug\CryptoKeys.Properties.Resources.resources
+C:\Users\larryx\CryptoKeys\CryptoKeys\obj\Debug\CryptoKeys.csproj.GenerateResource.cache
+C:\Users\larryx\CryptoKeys\CryptoKeys\obj\Debug\CryptoKeys.csproj.CoreCompileInputs.cache
+C:\Users\larryx\CryptoKeys\CryptoKeys\obj\Debug\CryptoKeys.exe
+C:\Users\larryx\CryptoKeys\CryptoKeys\obj\Debug\CryptoKeys.pdb
+C:\Users\larryx\CryptoKeys\CryptoKeys\obj\Debug\CryptoKeys.Open.resources
+C:\Users\larryx\CryptoKeys\CryptoKeys\obj\Debug\CryptoKeys.Initialize.resources
+C:\Users\larryx\CryptoKeys\CryptoKeys\obj\Debug\CryptoKeys.Terminal.resources
+C:\Users\larryx\CryptoKeys\CryptoKeys\obj\Debug\CryptoKeys.Add.resources
+C:\Users\larryx\CryptoKeys\CryptoKeys\obj\Debug\CryptoKeys.Read.resources
+C:\Users\larryx\CryptoKeys\CryptoKeys\obj\Debug\CryptoKeys.Retrieve.resources
+C:\Users\larryx\CryptoKeys\CryptoKeys\obj\Debug\CryptoKeys.Edit.resources
+C:\Users\larryx\CryptoKeys\CryptoKeys\obj\Debug\CryptoKeys.Delete.resources
