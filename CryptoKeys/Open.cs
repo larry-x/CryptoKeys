@@ -33,6 +33,8 @@ namespace CryptoKeys
                 MessageBox.Show(welcome);
                 Initialize ini = new Initialize(fi);
                 ini.ShowDialog();
+                if (!File.Exists(fi.FPath))
+                    Close();
                 ini.Dispose();
             }
         }

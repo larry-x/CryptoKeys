@@ -19,7 +19,6 @@ namespace CryptoKeys
             fi = f;
             InitializeComponent();
             showtag.Text = $"Change key stored at {tag}:";
-            showpass.Text = pass;
         }
 
         private string tag;
