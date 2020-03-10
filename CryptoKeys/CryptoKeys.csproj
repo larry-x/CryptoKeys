@@ -53,6 +53,7 @@
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
     <Compile Include="FileInteraction.cs" />
+    <Compile Include="Hasher.cs" />
     <Compile Include="Read.cs">
       <SubType>Form</SubType>
     </Compile>

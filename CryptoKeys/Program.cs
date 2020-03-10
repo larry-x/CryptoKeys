@@ -17,7 +17,9 @@ namespace CryptoKeys
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            FileInteraction fi = new FileInteraction();
+            string FP = Path.Combine(Environment.CurrentDirectory, "secret.txt");
+            Hasher hasher = new Hasher(FP);
+            FileInteraction fi = new FileInteraction(FP, hasher);
             Application.Run(new Open(fi));
         }
     }

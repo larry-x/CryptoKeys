@@ -26,7 +26,7 @@ namespace CryptoKeys
         private void button1_Click(object sender, EventArgs e)
         {
             List<string> copy = fi.CopyPage();
-            copy.Remove(copy.Find(x => x.StartsWith(tag + "|")));
+            copy.Remove(copy.Find(x => x.StartsWith(tag + "¦")));
             fi.Recreate(copy);
             Close();
         }

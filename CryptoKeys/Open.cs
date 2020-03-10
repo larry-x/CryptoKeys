@@ -20,7 +20,6 @@ namespace CryptoKeys
         }
 
         FileInteraction fi;
-        private string passtry;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -39,13 +38,14 @@ namespace CryptoKeys
             }
         }
 
-        private void Unlock()
+        private void Unlock(string password)
         {
-            string match = fi.Login();
+            bool match = fi.Login(password);
 
-            if(passtry == match)
+            if(match)
             {
                 Terminal tm = new Terminal(fi);
+
                 Hide();
                 tm.ShowDialog();
                 Close();
@@ -59,8 +59,8 @@ namespace CryptoKeys
 
         private void ButtonClick(object sender, EventArgs e)
         {
-            passtry = passinput.Text;
-            Unlock();
+            string passtry = passinput.Text;
+            Unlock(passtry);
         }
 
         private void PressEnter(object sender, KeyPressEventArgs e)

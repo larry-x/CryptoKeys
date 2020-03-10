@@ -10,20 +10,27 @@ namespace CryptoKeys
 {
     public class FileInteraction
     {
-        public FileInteraction()
+        public FileInteraction(string fp, Hasher h)
         {
-            FPath = Path.Combine(Environment.CurrentDirectory, "secret.txt");
+            hasher = h;
+            FPath = fp;
         }
 
         public string FPath { get; }
+        private Hasher hasher;
 
         public void CreateSecret(string pass)
         {
+            byte[] bytesalt = hasher.GenerateSalt();
+            string salt = Convert.ToBase64String(bytesalt);
+            string hash = hasher.ComputeHash(pass, bytesalt);
+            string line = hash + "¦" + salt;
+
             try
             {
                 using (StreamWriter sw = new StreamWriter(FPath))
                 {
-                    sw.Write(pass);
+                    sw.Write(hasher.Encrypt(line));
                 }
             }
             catch (Exception e)
@@ -32,27 +39,24 @@ namespace CryptoKeys
             }
         }
 
-        public string Login()
+        public bool Login(string attempt)
         {
-            string line1 = "";
-            try
-            {
-                using (StreamReader sr = new StreamReader(FPath))
-                {
-                    line1 = sr.ReadLine();
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return line1;
+            string[] line1 = PassLine();
+            bool succeed = false;
+            string tryhash = "";
+
+            tryhash = hasher.ComputeHash(attempt, Convert.FromBase64String(line1[1]));
+            succeed = (line1[0] == tryhash) ? true : false;
+            return succeed;
         }
 
-        public Dictionary<string,string> GetItems()
+        public Dictionary<string,string> AllItems()
         {
-            Dictionary<string, string> keys = new Dictionary<string, string>();
+            List<string> lines = new List<string>();
             string[] line = new string[2];
+
+            Dictionary<string, string> keys = new Dictionary<string, string>();
+            
             try
             {
                 using (StreamReader sr = new StreamReader(FPath))
@@ -60,8 +64,7 @@ namespace CryptoKeys
                     sr.ReadLine();
                     while (!sr.EndOfStream)
                     {
-                        line = sr.ReadLine().Split('|');
-                        keys.Add(line[0], line[1]);
+                        lines.Add(hasher.Decrypt(sr.ReadLine()));
                     }
                 }
             }
@@ -69,16 +72,24 @@ namespace CryptoKeys
             {
                 MessageBox.Show(e.Message);
             }
+
+            foreach (string l in lines)
+            {
+                line = l.Split('¦');
+                keys.Add(line[0], line[1]);
+            }
+
             return keys;
         }
 
         public void Entry(string line)
         {
+            line = hasher.Encrypt(line);
             try
             {
                 using (StreamWriter sw = new StreamWriter(FPath, true))
                 {
-                    sw.Write(line);
+                    sw.Write("\n" + line);
                 }
             }
             catch (Exception e)
@@ -89,14 +100,17 @@ namespace CryptoKeys
 
         public List<string> CopyPage()
         {
-            List<string> keys = new List<string>();
+            string open = "";
+            List<string> lines = new List<string>();
+
             try
             {
                 using (StreamReader sr = new StreamReader(FPath))
                 {
-                    while (!sr.EndOfStream)
+                    while(!sr.EndOfStream)
                     {
-                        keys.Add(sr.ReadLine());
+                        open = hasher.Decrypt(sr.ReadLine());
+                        lines.Add(open);
                     }
                 }
             }
@@ -104,7 +118,8 @@ namespace CryptoKeys
             {
                 MessageBox.Show(e.Message);
             }
-            return keys;
+
+            return lines;
         }
 
         public void Recreate(List<string> copy)
@@ -115,9 +130,9 @@ namespace CryptoKeys
                 {
                     for (int i = 0; i < copy.Count-1; i++)
                     {
-                        sw.WriteLine(copy[i]);
+                        sw.WriteLine(hasher.Encrypt(copy[i]));
                     }
-                    sw.Write(copy[copy.Count - 1]);
+                    sw.Write(hasher.Encrypt(copy[copy.Count - 1]));
                 }
             }
             catch (Exception e)
@@ -125,6 +140,24 @@ namespace CryptoKeys
                 MessageBox.Show(e.Message);
             }
         }
-       
+
+        public string[] PassLine()
+        {
+            string[] line = new string[2];
+
+            try
+            {
+                using (StreamReader sr = new StreamReader(FPath))
+                {
+                    line = hasher.Decrypt(sr.ReadLine()).Split('¦');
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return line;
+        }
+
     }
 }

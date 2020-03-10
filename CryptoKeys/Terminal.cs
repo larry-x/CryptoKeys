@@ -26,7 +26,7 @@ namespace CryptoKeys
 
         private void Refresh_Screen()
         {
-            Items = fi.GetItems();
+            Items = fi.AllItems();
             tags = Items.Keys.ToArray();
             allitems.Items.Clear();
             allitems.Items.AddRange(tags);

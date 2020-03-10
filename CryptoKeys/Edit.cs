@@ -27,14 +27,14 @@ namespace CryptoKeys
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string entry = tag + "|" + Remove_char(showpass.Text);
+            string entry = tag + "¦" + Remove_char(showpass.Text);
             Repopulate(entry);
             Close();
         }
 
         private void Special_char(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == '|' || e.KeyChar == ' ')
+            if (e.KeyChar == '¦')
             {
                 e.Handled = true;
             }
@@ -42,15 +42,14 @@ namespace CryptoKeys
 
         private string Remove_char(string s)
         {
-            s = s.Replace("|", string.Empty);
-            s = s.Replace(" ", string.Empty);
+            s = s.Replace("¦", string.Empty);
             return s;
         }
 
         private void Repopulate(string newentry)
         {
             List<string> copy = fi.CopyPage();
-            int i = copy.FindIndex(x => x.StartsWith(tag + "|"));
+            int i = copy.FindIndex(x => x.StartsWith(tag + "¦"));
             copy[i] = newentry;
             fi.Recreate(copy);
         }

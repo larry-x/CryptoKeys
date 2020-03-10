@@ -122,6 +122,6 @@
 
 NOTE: You should use your most familiar password here. This is the password you will use to access the rest of the keys stores in this application. If you forget this password consider your keys lost unless you can go into this program and reverse engineer it.
 
-INFO: This program uses multiple levels of encryption to hide your passwords in plain sight. Each password item consists of a tag and an actual password value. Look over your shoulder, make sure no one is watching, and enter your login password.</value>
+INFO: This program uses multiple levels of encryption to hide your passwords in plain sight. Each password item consists of a tag and an actual password value (key). Look over your shoulder, make sure no one is watching, and enter your login password.</value>
   </data>
 </root>

@@ -24,7 +24,7 @@ namespace CryptoKeys
 
         private void Special_char(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == '|' || e.KeyChar == ' ')
+            if(e.KeyChar == '¦')
             {
                 e.Handled = true;
             }
@@ -32,8 +32,7 @@ namespace CryptoKeys
 
         private string Remove_char(string s)
         {
-            s = s.Replace("|", string.Empty);
-            s = s.Replace(" ", string.Empty);
+            s = s.Replace("¦", string.Empty);
             return s;
         }
 
@@ -49,7 +48,7 @@ namespace CryptoKeys
             }
             else
             {
-                string entry = "\n" + Remove_char(newtag.Text) + "|" + Remove_char(newpass.Text);
+                string entry = Remove_char(newtag.Text) + "¦" + Remove_char(newpass.Text);
                 fi.Entry(entry);
                 Close();
             }
