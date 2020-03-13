@@ -119,7 +119,7 @@
   </resheader>
   <data name="label1.Text" xml:space="preserve">
     <value>[Overview]
-CryptoKeys tracks passwords, secret numbers, and whatever else you would like to remember. Everything is saved and encrypted in secret.txt. Except that someone has access to the source code, it is impossible to break the encryption. If you regularly back up secret.txt, you can never lose your passwords.  
+CryptoKeys tracks passwords, secret numbers, and whatever else you would like to remember. Everything is saved and encrypted in secret.txt. Except that someone has coding knowledge and access to the source code, it is impossible to break the encryption. If you regularly back up secret.txt, you can never lose your passwords.  
 
 [Important Steps]
 1. Remember your login password. At present there is no mechanism to recover it.
