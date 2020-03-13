@@ -119,17 +119,17 @@
   </resheader>
   <data name="label1.Text" xml:space="preserve">
     <value>[Overview]
-CryptoKeys remembers your passwords and the login password in secret.txt, which is located in the application folder. The login password used to get into the app is encrypted, and the entire document is again encrypted.
+CryptoKeys tracks passwords, secret numbers, and whatever else you would like to remember. Everything is saved and encrypted in secret.txt. Except that someone has access to the source code, it is impossible to break the encryption. If you regularly back up secret.txt, you can never lose your passwords.  
 
 [Important Steps]
-1. Remember your login password. Without coding knowledge of encryption it will be impossible to retrieve your passwords if you forget your login password.
+1. Remember your login password. At present there is no mechanism to recover it.
 2. Back up secret.txt and keep it safe. Even should your computer crash and burn, as long as have access to this application, secret.txt, and the login password, you can recover all your passwords.
-3. Should you need to recover your passwords on a new machine, simply download this application, copy 'the master key' into the application folder, and boot up the program again.    
+3. Should you need to recover your passwords, simply download this application, put secret.txt into the same application folder, and boot up the program again.    
 
 [Usage]
-Password items consist of a name and the actual password. The name can be a maximum of 42 characters and the password value can be a maximum of 64 characters. You may safely quit the program by x-ing out of it any time.
+Passwords are associated with a name, or 'tag'. When using the program for the first time, a new secret.txt document will be generated for you. Afterwards they should always be together in the same folder.
 
 [More Users]
-CryptoKeys was designed to be used by one person on one machine. If you have lots of passwords to store or multiple users, re-download CryptoKeys, rename the folder 'CryptoKeys 2' or whatever you like, and use as normal. When backing up secret.txt, it's okay to rename it, but when running the program, be sure to change the name back to secret.txt.</value>
+CryptoKeys was designed to be used by one person on one machine. If you want to organize many passwords or want it to be used by multiple users, simply make another folder, copy in CryptoKeys.exe, name it 'CryptoKeys 2' or whatever you like, and use as normal. Be sure not to rename secret.txt.</value>
   </data>
 </root>

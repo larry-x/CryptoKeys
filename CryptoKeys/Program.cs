@@ -18,7 +18,7 @@ namespace CryptoKeys
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             string FP = Path.Combine(Environment.CurrentDirectory, "secret.txt");
-            Hasher hasher = new Hasher(FP);
+            Hasher hasher = new Hasher();
             FileInteraction fi = new FileInteraction(FP, hasher);
             Application.Run(new Open(fi));
         }

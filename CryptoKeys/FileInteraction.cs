@@ -50,6 +50,24 @@ namespace CryptoKeys
             return succeed;
         }
 
+        public string[] PassLine()
+        {
+            string[] line = new string[2];
+
+            try
+            {
+                using (StreamReader sr = new StreamReader(FPath))
+                {
+                    line = hasher.Decrypt(sr.ReadLine()).Split('¦');
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return line;
+        }
+
         public Dictionary<string,string> AllItems()
         {
             List<string> lines = new List<string>();
@@ -141,22 +159,9 @@ namespace CryptoKeys
             }
         }
 
-        public string[] PassLine()
+        public string SeedKeys(string seed)
         {
-            string[] line = new string[2];
-
-            try
-            {
-                using (StreamReader sr = new StreamReader(FPath))
-                {
-                    line = hasher.Decrypt(sr.ReadLine()).Split('¦');
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message);
-            }
-            return line;
+            return hasher.Hash256(seed);
         }
 
     }

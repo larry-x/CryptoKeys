@@ -118,8 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label1.Text" xml:space="preserve">
-    <value>Password entries consist of a tag and the actual password. An example tag would be 'yahoo email'. Tags must be unique.
+    <value>Password entries consist of a tag and the actual password. An example tag would be 'my other email'. Tags must be unique. Empty spaces and broken pipe '¦' characters are not allowed. 
 
-The tag can be a maximum of 42 characters and the password value can be a maximum of 64 characters. Pipe | and empty space characters are not allowed.</value>
+The tag can be a maximum of 42 characters and the password can be a maximum of 64 characters.</value>
   </data>
 </root>

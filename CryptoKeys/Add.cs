@@ -17,6 +17,7 @@ namespace CryptoKeys
             fi = f;
             tags = t;
             InitializeComponent();
+            newtag.Select();
         }
 
         private FileInteraction fi;
@@ -28,19 +29,20 @@ namespace CryptoKeys
             {
                 e.Handled = true;
             }
-        }
-
-        private string Remove_char(string s)
-        {
-            s = s.Replace("¦", string.Empty);
-            return s;
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                save_Click(sender, e);
+            }
         }
 
         private void save_Click(object sender, EventArgs e)
         {
-            if(tags.Contains(newtag.Text))
+            newtag.Text = newtag.Text.Replace("¦", string.Empty);
+            newpass.Text = newpass.Text.Replace("¦", string.Empty);
+
+            if (tags.Contains(newtag.Text))
             {
-                MessageBox.Show("You cannot have two identical tags.");
+                MessageBox.Show("This tag already exists. Give it a different name.");
             }
             else if(string.IsNullOrEmpty(newtag.Text))
             {
@@ -48,11 +50,10 @@ namespace CryptoKeys
             }
             else
             {
-                string entry = Remove_char(newtag.Text) + "¦" + Remove_char(newpass.Text);
+                string entry = newtag.Text + "¦" + newpass.Text;
                 fi.Entry(entry);
                 Close();
             }
-            
         }
 
         private void canceladd_Click(object sender, EventArgs e)

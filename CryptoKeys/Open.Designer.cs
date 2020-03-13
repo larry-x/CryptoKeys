@@ -36,28 +36,28 @@
             // welcometext
             // 
             this.welcometext.AutoSize = true;
-            this.welcometext.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcometext.Location = new System.Drawing.Point(390, 111);
+            this.welcometext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcometext.Location = new System.Drawing.Point(369, 133);
             this.welcometext.Name = "welcometext";
-            this.welcometext.Size = new System.Drawing.Size(229, 25);
+            this.welcometext.Size = new System.Drawing.Size(276, 29);
             this.welcometext.TabIndex = 0;
-            this.welcometext.Text = "Welcome to CryptoKeyz.";
+            this.welcometext.Text = "Welcome to CryptoKeys.";
             // 
             // passinput
             // 
             this.passinput.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passinput.Location = new System.Drawing.Point(254, 274);
+            this.passinput.Location = new System.Drawing.Point(254, 287);
             this.passinput.MaxLength = 64;
             this.passinput.Name = "passinput";
             this.passinput.PasswordChar = '$';
             this.passinput.Size = new System.Drawing.Size(535, 30);
             this.passinput.TabIndex = 1;
-            this.passinput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(PressEnter);
+            this.passinput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PressEnter);
             // 
             // passsubmit
             // 
             this.passsubmit.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passsubmit.Location = new System.Drawing.Point(395, 337);
+            this.passsubmit.Location = new System.Drawing.Point(395, 350);
             this.passsubmit.Name = "passsubmit";
             this.passsubmit.Size = new System.Drawing.Size(224, 75);
             this.passsubmit.TabIndex = 2;
@@ -70,7 +70,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1040, 585);
+            this.ClientSize = new System.Drawing.Size(1025, 647);
             this.Controls.Add(this.passsubmit);
             this.Controls.Add(this.passinput);
             this.Controls.Add(this.welcometext);

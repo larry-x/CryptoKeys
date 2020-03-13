@@ -44,6 +44,7 @@
             this.passwordbox.Name = "passwordbox";
             this.passwordbox.Size = new System.Drawing.Size(570, 30);
             this.passwordbox.TabIndex = 0;
+            this.passwordbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Special_chars);
             // 
             // info
             // 
@@ -69,13 +70,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(1025, 650);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1025, 647);
             this.Controls.Add(this.confirmpassword);
             this.Controls.Add(this.info);
             this.Controls.Add(this.passwordbox);
             this.Name = "Initialize";
-            this.Text = "Initialize";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "CryptoKeys";
             this.ResumeLayout(false);
             this.PerformLayout();
 

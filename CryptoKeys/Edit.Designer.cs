@@ -36,10 +36,10 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(394, 270);
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(405, 270);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 52);
+            this.button1.Size = new System.Drawing.Size(128, 52);
             this.button1.TabIndex = 2;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = true;
@@ -47,16 +47,16 @@
             // 
             // showtag
             // 
-            this.showtag.Font = new System.Drawing.Font("Candara", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showtag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showtag.Location = new System.Drawing.Point(103, 38);
             this.showtag.Name = "showtag";
-            this.showtag.Size = new System.Drawing.Size(524, 48);
+            this.showtag.Size = new System.Drawing.Size(524, 122);
             this.showtag.TabIndex = 0;
             // 
             // showpass
             // 
-            this.showpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showpass.Location = new System.Drawing.Point(149, 170);
+            this.showpass.Font = new System.Drawing.Font("Courier New", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showpass.Location = new System.Drawing.Point(151, 197);
             this.showpass.Name = "showpass";
             this.showpass.Size = new System.Drawing.Size(438, 30);
             this.showpass.TabIndex = 3;
@@ -64,10 +64,10 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(236, 270);
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(205, 270);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 52);
+            this.button2.Size = new System.Drawing.Size(134, 52);
             this.button2.TabIndex = 4;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
@@ -78,13 +78,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(738, 378);
+            this.ClientSize = new System.Drawing.Size(738, 384);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.showpass);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.showtag);
             this.Name = "Edit";
-            this.Text = "CryptoKeyz";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "CryptoKeys";
             this.ResumeLayout(false);
             this.PerformLayout();
 

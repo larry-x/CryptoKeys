@@ -10,21 +10,19 @@ namespace CryptoKeys
 {
     public class Hasher
     {
-        public Hasher(string fp)
+        public Hasher()
         {
-            filepath = fp;
             pbk = new Rfc2898DeriveBytes(KEY, SALT);
             Key = pbk.GetBytes(32);
             IV = pbk.GetBytes(16);
         }
 
-        private string filepath;
-        private const string KEY = "JUSTICE JUSTICE YOU SHALL PURSUE";
-        private readonly byte[] SALT = {0, 72, 49, 222, 164, 144, 7, 121};
-        private byte[] Key;
-        private byte[] IV;
         Rfc2898DeriveBytes pbk;
-
+        private const string KEY = "JUSTICE JUSTICE YOU SHALL PURSUE";
+        private readonly byte[] SALT = {0, 72, 49, 222, 164, 144, 7, 255};
+        private readonly byte[] Key;
+        private readonly byte[] IV;
+        
         public string ComputeHash(string password, byte[] salt)
         {
             Rfc2898DeriveBytes rfc = new Rfc2898DeriveBytes(password, salt, 1001);
@@ -40,15 +38,6 @@ namespace CryptoKeys
             ran.GetBytes(salt);
 
             return salt;
-        }
-
-        public string Hash256(string text)
-        {
-            byte[] bytearray = Encoding.UTF8.GetBytes(text);
-            SHA256Managed sha = new SHA256Managed();
-            string hash = Convert.ToBase64String(sha.ComputeHash(bytearray));
-
-            return hash;
         }
 
         public string Encrypt(string message)
@@ -104,5 +93,14 @@ namespace CryptoKeys
             return opentext;
         }
 
+        public string Hash256(string text)
+        {
+            SHA256Managed sha = new SHA256Managed();
+            byte[] bytehash = Encoding.UTF8.GetBytes(text);
+            string hash = Convert.ToBase64String(sha.ComputeHash(bytehash));
+            bytehash = Encoding.UTF8.GetBytes(hash);
+            hash = Convert.ToBase64String(sha.ComputeHash(bytehash));
+            return hash;
+        }
     }
 }

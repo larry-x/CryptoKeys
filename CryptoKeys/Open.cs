@@ -17,6 +17,7 @@ namespace CryptoKeys
         {
             fi = f;
             InitializeComponent();
+            passinput.Select();
         }
 
         FileInteraction fi;
@@ -38,9 +39,9 @@ namespace CryptoKeys
             }
         }
 
-        private void Unlock(string password)
+        private void Unlock(string attempt)
         {
-            bool match = fi.Login(password);
+            bool match = fi.Login(attempt);
 
             if(match)
             {

@@ -18,7 +18,8 @@ namespace CryptoKeys
             pass = p;
             fi = f;
             InitializeComponent();
-            showtag.Text = $"Change key stored at {tag}:";
+            showtag.Text = $"Change key stored at:\n{tag}";
+            showpass.Select();
         }
 
         private string tag;
@@ -37,6 +38,10 @@ namespace CryptoKeys
             if (e.KeyChar == '¦')
             {
                 e.Handled = true;
+            }
+            if (e.KeyChar == (char)Keys.Return)
+            {
+                button2_Click(sender, e);
             }
         }
 

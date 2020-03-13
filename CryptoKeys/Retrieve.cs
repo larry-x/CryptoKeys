@@ -17,7 +17,7 @@ namespace CryptoKeys
             tag = t;
             pass = p;
             InitializeComponent();
-            showtag.Text = $"Value stored at {tag}:";
+            showtag.Text = $"Password stored at:\n{tag}";
             showpass.Text = pass;
         }
 

@@ -43,8 +43,8 @@
             this.readme.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.readme.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.readme.FlatAppearance.BorderSize = 3;
-            this.readme.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.readme.Location = new System.Drawing.Point(51, 272);
+            this.readme.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.readme.Location = new System.Drawing.Point(45, 336);
             this.readme.Name = "readme";
             this.readme.Size = new System.Drawing.Size(223, 56);
             this.readme.TabIndex = 0;
@@ -57,12 +57,12 @@
             this.generate.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.generate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.generate.FlatAppearance.BorderSize = 3;
-            this.generate.Font = new System.Drawing.Font("Sitka Small", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generate.Location = new System.Drawing.Point(51, 172);
+            this.generate.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generate.Location = new System.Drawing.Point(45, 236);
             this.generate.Name = "generate";
             this.generate.Size = new System.Drawing.Size(223, 56);
             this.generate.TabIndex = 1;
-            this.generate.Text = "Generate Bitcoin keys";
+            this.generate.Text = "Generate Password";
             this.generate.UseVisualStyleBackColor = false;
             this.generate.Click += new System.EventHandler(this.generate_Click);
             // 
@@ -71,8 +71,8 @@
             this.add.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.add.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.add.FlatAppearance.BorderSize = 3;
-            this.add.Font = new System.Drawing.Font("Nirmala UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.add.Location = new System.Drawing.Point(51, 70);
+            this.add.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.add.Location = new System.Drawing.Point(45, 134);
             this.add.Name = "add";
             this.add.Size = new System.Drawing.Size(223, 56);
             this.add.TabIndex = 2;
@@ -82,11 +82,12 @@
             // 
             // allitems
             // 
+            this.allitems.Font = new System.Drawing.Font("Candara", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.allitems.FormattingEnabled = true;
-            this.allitems.ItemHeight = 20;
-            this.allitems.Location = new System.Drawing.Point(324, 23);
+            this.allitems.ItemHeight = 24;
+            this.allitems.Location = new System.Drawing.Point(311, 33);
             this.allitems.Name = "allitems";
-            this.allitems.Size = new System.Drawing.Size(502, 504);
+            this.allitems.Size = new System.Drawing.Size(502, 580);
             this.allitems.TabIndex = 3;
             this.allitems.SelectedValueChanged += new System.EventHandler(this.Enable_buttons);
             // 
@@ -95,8 +96,8 @@
             this.retrieve.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.retrieve.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.retrieve.FlatAppearance.BorderSize = 3;
-            this.retrieve.Font = new System.Drawing.Font("Mongolian Baiti", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.retrieve.Location = new System.Drawing.Point(869, 102);
+            this.retrieve.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.retrieve.Location = new System.Drawing.Point(860, 96);
             this.retrieve.Name = "retrieve";
             this.retrieve.Size = new System.Drawing.Size(132, 56);
             this.retrieve.TabIndex = 4;
@@ -109,8 +110,8 @@
             this.edit.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.edit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.edit.FlatAppearance.BorderSize = 3;
-            this.edit.Font = new System.Drawing.Font("Mongolian Baiti", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edit.Location = new System.Drawing.Point(869, 214);
+            this.edit.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edit.Location = new System.Drawing.Point(860, 208);
             this.edit.Name = "edit";
             this.edit.Size = new System.Drawing.Size(132, 56);
             this.edit.TabIndex = 5;
@@ -123,8 +124,8 @@
             this.delete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.delete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.delete.FlatAppearance.BorderSize = 3;
-            this.delete.Font = new System.Drawing.Font("Mongolian Baiti", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delete.Location = new System.Drawing.Point(869, 320);
+            this.delete.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delete.Location = new System.Drawing.Point(860, 314);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(132, 56);
             this.delete.TabIndex = 6;
@@ -137,8 +138,8 @@
             this.leave.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.leave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.leave.FlatAppearance.BorderSize = 3;
-            this.leave.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.leave.Location = new System.Drawing.Point(51, 377);
+            this.leave.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.leave.Location = new System.Drawing.Point(45, 441);
             this.leave.Name = "leave";
             this.leave.Size = new System.Drawing.Size(223, 56);
             this.leave.TabIndex = 7;
@@ -151,7 +152,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1040, 569);
+            this.ClientSize = new System.Drawing.Size(1025, 647);
             this.Controls.Add(this.leave);
             this.Controls.Add(this.delete);
             this.Controls.Add(this.edit);

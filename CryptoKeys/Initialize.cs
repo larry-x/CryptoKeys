@@ -18,6 +18,7 @@ namespace CryptoKeys
             fi = f;
             path = Path.Combine(Environment.CurrentDirectory, "secret.txt");
             InitializeComponent();
+            passwordbox.Select();
         }
 
         FileInteraction fi;
@@ -25,9 +26,32 @@ namespace CryptoKeys
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String password = passwordbox.Text;
-            fi.CreateSecret(password);
-            Close();
+            passwordbox.Text = Remove_Chars(passwordbox.Text);
+
+            if(string.IsNullOrEmpty(passwordbox.Text))
+            {
+                MessageBox.Show("The password box is blank.");
+            }
+            else
+            {
+                fi.CreateSecret(passwordbox.Text);
+                Close();
+            }
+        }
+
+        private string Remove_Chars(string sample)
+        {
+            sample = sample.Replace(" ", string.Empty);
+            sample = sample.Replace("¦", string.Empty);
+            return sample;
+        }
+
+        private void Special_chars(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '¦' || e.KeyChar == ' ')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

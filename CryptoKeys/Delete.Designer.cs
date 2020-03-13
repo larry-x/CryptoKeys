@@ -35,8 +35,8 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(199, 259);
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(204, 262);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(108, 52);
             this.button1.TabIndex = 2;
@@ -46,16 +46,16 @@
             // 
             // showtag
             // 
-            this.showtag.Font = new System.Drawing.Font("Candara", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showtag.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showtag.Location = new System.Drawing.Point(103, 38);
             this.showtag.Name = "showtag";
-            this.showtag.Size = new System.Drawing.Size(524, 117);
+            this.showtag.Size = new System.Drawing.Size(524, 164);
             this.showtag.TabIndex = 0;
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(372, 259);
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(377, 262);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(108, 52);
             this.button2.TabIndex = 4;
@@ -68,12 +68,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Info;
-            this.ClientSize = new System.Drawing.Size(738, 378);
+            this.ClientSize = new System.Drawing.Size(738, 384);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.showtag);
             this.Name = "Delete";
-            this.Text = "Retrieve";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "CryptoKeys";
             this.ResumeLayout(false);
 
         }

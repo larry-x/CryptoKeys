@@ -30,7 +30,11 @@ namespace CryptoKeys
             tags = Items.Keys.ToArray();
             allitems.Items.Clear();
             allitems.Items.AddRange(tags);
-            Disable_buttons();
+
+            if(Items.Count > 0)
+                allitems.SelectedItem = allitems.Items[Items.Count-1];
+            else
+                Disable_buttons();
         }
 
         private void add_Click(object sender, EventArgs e)
@@ -43,7 +47,12 @@ namespace CryptoKeys
 
         private void generate_Click(object sender, EventArgs e)
         {
-
+            Generate g = new Generate(fi, tags);
+            Hide();
+            g.ShowDialog();
+            g.Dispose();
+            Show();
+            Refresh_Screen();
         }
 
         private void readme_Click(object sender, EventArgs e)
@@ -117,8 +126,6 @@ namespace CryptoKeys
         {
             Close();
         }
-
-        
     }
 
 }
