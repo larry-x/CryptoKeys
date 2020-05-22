@@ -17,7 +17,7 @@ namespace CryptoKeys
             tag = t;
             fi = f;
             InitializeComponent();
-            showtag.Text = $"Are you sure you want to delete the tag and key:\n{tag}?";
+            showtag.Text = $"Are you sure you want to delete the tag and the key:\n{tag}?";
         }
 
         private string tag;
